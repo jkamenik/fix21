@@ -1,6 +1,25 @@
 <!doc>
 <HTML>
+  <head>
+    <script src="./mustache.js" charset="utf-8"></script>
+    <script src="http://code.jquery.com/jquery-2.1.1.js" charset="utf-8"></script>
+    <script src="./jquery.mustache.js" charset="utf-8"></script>
+    <script src="./jquery.storage.js" charset="utf-8"></script>
+    <script src="./application.js" charset="utf-8"></script>
+
+    <script id="template" type="text/html">
+      <button>Reset</button>
+      {{#types}}
+        <div id="{{name}}" class="category {{color}}">
+          <h1>{{name}}</h1>
+          {{#checkboxes}}
+            <input id="{{color}}-{{.}}" type=checkbox></input>
+          {{/checkboxes}}
+        </div>
+      {{/types}}
+    </script>
+  </head>
 <body>
-Testing 
+Loading...
 </body>
 </HTML>
